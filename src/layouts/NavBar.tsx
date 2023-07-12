@@ -6,7 +6,7 @@ import classNames from '@src/utils/classNames';
 
 const navigation = [
 	{ name: 'Dashboard', href: '/', current: true },
-	{ name: 'Team', href: '/team', current: false },
+	{ name: 'System Details', href: '/systemDetails', current: false },
 	{ name: 'Projects', href: '/projects', current: false },
 ];
 
