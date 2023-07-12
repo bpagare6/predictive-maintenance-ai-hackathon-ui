@@ -7,7 +7,7 @@ import classNames from '@src/utils/classNames';
 const navigation = [
 	{ name: 'Dashboard', href: '/', current: true },
 	{ name: 'System Details', href: '/systemDetails', current: false },
-	{ name: 'Projects', href: '/projects', current: false },
+	{ name: 'Hourly Prediction', href: '/prediction', current: false },
 ];
 
 export default function Navbar() {
@@ -36,7 +36,7 @@ export default function Navbar() {
 												key={item.name}
 												href={item.href}
 												className={classNames(
-													item.current
+													window.location.pathname===item.href
 														? 'text-indigo-600 underline underline-offset-8'
 														: 'text-gray-500 hover:underline underline-offset-8 hover:text-indigo-600',
 													'px-3 py-2 rounded-md text-base font-semibold'
@@ -63,12 +63,12 @@ export default function Navbar() {
 									as="a"
 									href={item.href}
 									className={classNames(
-										item.current
+										window.location.pathname===item.href
 											? 'text-indigo-600 underline underline-offset-8'
 											: 'text-gray-500 hover:underline underline-offset-8 hover:text-indigo-600',
 										'block px-3 py-2 rounded-md text-base font-semibold'
 									)}
-									aria-current={item.current ? 'page' : undefined}
+									aria-current={window.location.pathname===item.href ? 'page' : undefined}
 								>
 									{item.name}
 								</Disclosure.Button>

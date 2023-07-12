@@ -10,6 +10,7 @@ function App() {
 				<Route path="/" element={<Home />} />
 				<Route path="/systemDetails" element={<SystemDetails/>} />
 				<Route path="*" element={<PageNotFound />} />
+				{/* <Route path="/prediction" element={<Prediction />} /> */}
 				
 			</Routes>
 		</BrowserRouter>
